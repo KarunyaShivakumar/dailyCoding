@@ -1,0 +1,25 @@
+function sumOfElem(){
+  let arr=[9,2,0,14,5]
+  let highest=0;
+  let lowest=0;
+  let totalSum=0;
+  let lowestnumber=arr[0];
+  let greatestnumber=arr[0];
+  for(i=0;i<arr.length;i++){
+    for(j=i;j<arr.length;j++){
+      if(arr[j]<arr[i]&&arr[j]<lowestnumber){
+        lowestnumber=arr[j]
+      }
+      if(arr[j]>arr[i]&&arr[j]>greatestnumber){
+        greatestnumber=arr[j]
+      }
+    }
+    totalSum+=arr[i];
+  }
+  lowest=totalSum-greatestnumber
+  highest=totalSum-lowestnumber
+  // console.log(lowestnumber,greatestnumber,totalSum,"\n")
+  console.log('lowest :',lowest,'highest :',highest)
+}
+
+sumOfElem()
